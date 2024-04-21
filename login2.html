@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원/ 비회원로그인</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        /*필드셋 테두리 없앰*/
+        legend {
+            display: none;
+        }
+
+        /*레전드 글자 안 보이게 함*/
+        /*정렬*/
+        label,
+        input,
+        select {
+            vertical-align: middle;
+        }
+
+        /*수직방식정렬*/
+
+        /*기본 링크 스타일*/
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:focus {
+            color: black;
+            text-decoration: none;
+        }
+
+        /*기본 스타일*/
+        body {
+            font-size: 12px;
+        }
+
+        /*가장 보기 편안한 크기*/
+
+        /*회원,비회원 로그인 들어있는 전체영역*/
+        div#loginBox {
+            position: relative;
+            border: 0px solid tomato;
+        }
+
+        /*-------회원로그인 양식-----------*/
+        section.login {
+            display: block;
+            position: absolute;
+            /* z-index: 1; 위아래 순서를 변경하는 태그 */
+            top: 50px;
+            width: 300px;
+            border-bottom-color:rgb(167, 166, 158);
+            border-top: 1px solid rgb(167, 166, 158);
+            padding-top: 10px;
+            background-color: rgb(255, 255, 255)
+        }
+
+        /*회원주문 탭메뉴*/
+        h3#tab01 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            background-color: white;
+            color: white;
+            width: 150px;
+            height: 50px;
+        }
+
+        h3#tab01 a {
+            display: block;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            border-bottom: 0px solid rgb(255, 255, 255);
+            padding-bottom: 10px;
+            background-color: ;
+            padding-top: 10px;
+        }
+
+        /*로그인 form*/
+        section.login form {
+            border: 0px solid rgb(15, 17, 146);
+        }
+
+        section.login form table {
+            width: 280px;
+            border: 0px solid rgb(110, 170, 13);
+            border-collapse: collapse;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        section.login form table td {
+            padding-left: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        /*로그인 버튼*/
+        section.login form table td button {
+            border: 0px solid orange;
+            font-size: 12px;
+            padding: 20px 10px 20px 10px;
+            background-color: rgba(139, 15, 25, 0.925);
+            color: white;
+        }
+
+        /*상단 우측 하단 좌측*/
+        /*레이블 (아이디 비밀번호 부분)*/
+        section.login form table td label {
+            border: 0px solid crimson;
+        }
+
+        /*로그인, 비밀번호 입력상자 스타일*/
+        section.login form table input.box {
+            width: 130px;
+            padding-left: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+
+        div.find {
+            padding: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-top: 1px solid rgb(171, 173, 171);
+            text-align: center;
+        }
+
+        div#newLogin1 {
+            text-align: center;
+            border: 0px solid red;
+            width: 100px;
+            padding: 10px;
+            border-radius: 2%;
+            background-color: rgba(139, 15, 25, 0.925);
+            margin-left: 85px;
+            margin-bottom: 10px;
+            margin-top: 4px;
+        }
+
+        div#newLogin1 a {
+            color: white;
+            position: relative;
+
+        }
+
+        /*--------------------------------비회원로그인 양식-------------------------------------*/
+        section.login_guest {
+            display: none;
+            position: absolute;
+            top: 50px;
+            width: 300px;
+            border-bottom-color:rgb(167, 166, 158);
+            border-bottom: 1px solid rgb(167, 166, 158);
+            border-top: 1px solid rgb(167, 166, 158);
+            background-color: white;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        /*비회원주문 탭메뉴*/
+        h3#tab02 {
+            position: absolute;
+            left: 140px;
+            top: 0;
+            padding: 10px;
+            color: white;
+            width: 150px;
+        }
+
+        h3#tab02 a {
+            display: block;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            border-bottom: 0px solid rgb(255, 255, 255);
+            padding-bottom: 10px;
+            background-color: ;
+            padding-top: 10px;
+        }
+
+        /*비회원로그인 form*/
+        section.login_guest form {
+            border: 0px solid rgb(15, 17, 146);
+        }
+
+        section.login_guest form table {
+            width: 280px;
+            border: 0px solid rgb(110, 170, 13);
+            border-collapse: collapse;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        section.login_guest form table td {
+            padding-left: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        /*비회원로그인 버튼*/
+        section.login_guest form table td button {
+            border: 0px solid orange;
+            font-size: 12px;
+            padding: 20px 10px 20px 10px;
+            background-color: rgba(139, 15, 25, 0.925);
+            color: white;
+        }
+
+        /*상단 우측 하단 좌측*/
+        /*레이블 (아이디 비밀번호 부분)*/
+        section.login_guest form table td label {
+            border: 0px solid crimson;
+        }
+
+        /*비로그인, 비밀번호 입력상자 스타일*/
+        section.login_guest form table input.box {
+            width: 130px;
+            padding-left: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+
+        div.find {
+            padding: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-top: 1px solid rgb(171, 173, 171);
+            text-align: center;
+        }
+
+        div#newLogin2 button {
+            border: 0px solid orange;
+            font-size: 12px;
+            padding: 5px 2px 5px 2px;
+            background-color: rgba(22, 21, 21, 0.74);
+            color: white;
+            text-align: center;
+            width: 100px;
+            margin-left: 90px;
+            margin-bottom: 7px;
+            border-radius: 3%;
+        }
+
+        #confirm {
+            margin-right: 50px;
+            font-size: 12px;
+        }
+        #arrow {
+            margin-left: 50px;
+            font-size: 10px;
+        }
+        #arrow .event {
+            padding-top: 15px;
+        }
+    </style>
+
+    <script>
+
+        function tab1() {
+            var show_login = document.getElementById("login"); //회원주문
+            var show_login_guest = document.getElementById("login_guest"); //비회원주문
+            var tab1 = document.getElementById("tab1"); //탭메뉴 _회원주문
+            var tab2 = document.getElementById("tab2"); // 탭메뉴_비회원
+
+            //회원주문 탭메뉴를 클릭 했을 때,
+            tab1.style.borderBottom = "3px solid red"; //탭메뉴_하단 디자인
+            tab2.style.borderBottom = "3px solid white";
+            tab1.style.color = "red";
+            tab2.style.color = "black";
+
+            show_login.style.display = "block";       //회원주문 로그인영역
+            show_login_guest.style.display = "none";  //비회원주문 로그인영역
+            show_login.style.zIndex = 2;    //겹쳐보이는 순서 지정
+            show_login_guest.style.zIndex = 1;
+        }
+
+        function tab2() {
+            var show_login = document.getElementById("login"); //회원주문   
+            var show_login_guest = document.getElementById("login_guest"); //비회원주문
+            var tab1 = document.getElementById("tab1"); //탭메뉴 _회원주문
+            var tab2 = document.getElementById("tab2"); // 탭메뉴_비회원
+
+            //비회원주문 탭메뉴를 클릭 했을 때,
+            tab1.style.borderBottom = "3px solid white"; //탭메뉴_하단 디자인
+            tab2.style.borderBottom = "3px solid red";
+            tab1.style.color = "black";
+            tab2.style.color = "red";
+
+            show_login.style.display = "none";       //회원주문 로그인영역
+            show_login_guest.style.display = "block";  //비회원주문 로그인영역
+            show_login.style.zIndex = 1;
+            show_login_guest.style.zIndex = 2;
+        }
+
+
+        function login() { //로그인이라는 함수
+
+            // alert("로그인 함수가 연결되었습니다."); //test
+            var member1_id = "회원1"; //멤버1의 아이디
+            var member1_pw = 1234; //멤버21의 비밀번호
+
+            //.getElementById() 아이디를 사용한 태그를 담아주는 메소드
+            var userId = document.getElementById("userId").value;
+            var userPw = document.getElementById("userPw").value;
+
+            if ((userId == member1_id) && (userPw == member1_pw)) {
+                document.writeln("로그인 되었습니다.");
+            } else if ((userId == member1_id) || (userPw == member1_pw)) {
+                document.writeln("아이디 또는 비밀번호 정보가 일치하지 않습니다.");
+            } else {
+                document.writeln("회원정보가 일치하지 않습니다.");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="loginBox">
+        <!--로그인 : 회원 로그인/비회원 로그인영역-->
+        <h3 id="tab01"><a href="#" id="tab1" onclick="javascript:tab1(); return false">회원주문</a></h3>
+        <section id="login" class="login">
+            <form>
+                <fieldset>
+                    <legend>회원로그인정보</legend>
+                    <!--form 내용을 마크업하는 방법 3가지 : table 사용. ul.li 사용, p 사용-->
+                    <table>
+                        <tr>
+                            <td><label for="userId">아이디</label></td>
+                            <td><input type="text" required placeholder="Guest" id="userId" class="box" tabindex="1">
+                            </td>
+                            <td rowspan="2"><button type="submit" tabindex="3">로그인</button></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="userPw">비밀번호</label></td>
+                            <td> <input type="password" required placeholder="*****" id="userPw" class="box"
+                                    tabindex="2"></td>
+                        </tr>
+
+                    </table>
+                </fieldset>
+            </form>
+            <div>
+                <div id="newLogin1">
+                    <a href="#">간편로그인</a>
+                </div>
+                <div class="find">
+                    <a href="#">아이디</a> /
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+            </div>
+        </section>
+
+        <h3 id="tab02"><a href="#" id="tab2" onclick="javascript:tab2(); return false">비회원 주문</a></h3>
+        <section id="login_guest" class="login_guest">
+            <form>
+                <fieldset>
+                    <legend>비회원로그인정보</legend>
+                    <!--form 내용을 마크업하는 방법 3가지 : table 사용. ul.li 사용, p 사용-->
+                    <table>
+                        <tr>
+                            <td><label for="userId">이름</label></td>
+                            <td><input type="text" required placeholder="Guest" id="userId" class="box" tabindex="1">
+                            </td>
+                            <td rowspan="2"><button type="submit" tabindex="3">로그인</button></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="userPw">연락처</label></td>
+                            <td> <input type="password" required placeholder="*****" id="userPw" class="box"
+                                    tabindex="2"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+            <div>
+                <div id="newLogin2">
+                    <button type="submit" tabindex="3">인증번호발송</button>
+                </div>
+                <form>
+                    <fieldset>
+                        <table>
+                            <tr>
+                                <td> <label for="confirm">인증번호</label></td>
+                                <td> <input type="password" required placeholder="인증번호입력" id="confirm" class="box"
+                                        tabindex="2">
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="arrow">
+                        <table class="check">
+                            <br>
+                            <p><input type="checkbox"> 본인은 만 14세 이상입니다 (필수)</p>
+                            <p><input type="checkbox"> 개인정보 수집 및 이용 동의 (필수) <sapan style="text-decoration:underline"><a
+                                        href="#">보기</a>
+                                </sapan>
+                            </p>
+                            <p class="event">비회원 주문 시 할인 혜택을 받을 수 없습니다.<sapan style="text-decoration:underline"><a
+                                href="#">회원가입</a></p>
+                        </table>
+                    </div>
+                    </fieldset>
+                </form>
+                <!-- <div class="find">
+                    <a href="#">아이디</a> /
+                    <a href="#">비밀번호 찾기</a>
+                </div> -->
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

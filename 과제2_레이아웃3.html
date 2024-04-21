@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제2 레아아웃3</title>
+</head>
+
+<style>
+    div#wrap{ width: 1024px; height: 700px; border: 1px solid black; margin-left: 200px;}
+    header#header {height: 100px; background-color: cornflowerblue;}
+    div#contents {width: 1024px; height: 400px; background-color: brown;} 
+    div#footer:after{clear: both; display: block; content: "";}
+    div#ftr1 {width: 512px; height: 200px; background-color: aquamarine; float: left;}
+    div#ftr2 {width: 512px; height: 200px; background-color: darkgreen; float:right;}
+</style>
+
+<body>
+    <div id="wrap">
+        <header id="header">헤더</header>
+        <div id="contents">메인</div>
+        <footer id="footer">
+            <div id="ftr1">푸터1</div>
+            <div id="ftr2">푸터2</div>
+        </footer>
+    </div>
+</body>
+</html>

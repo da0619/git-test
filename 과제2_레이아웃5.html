@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제2 레이아웃5</title>
+</head>
+<style>
+    div#wrap {width: 1024px; border: 1px solid rgb(12, 17, 56); margin-left: 100px;}
+    section:after{clear: both; display: block; content: "";} /*섹션말고 콘텐츠에 부여하는게맞음*/
+    div#cont1 {width: 341px;height: 300px; float:left; background-color: rgb(106, 226, 50);}
+    div#cont2 {width: 341px;height: 300px; float:right; background-color: rgb(59, 154, 199);}
+    div#cont3 {width: 341px;height: 300px; float:left; background-color: rgb(49, 172, 0);}
+    div#cont4 {width: 512px;height: 300px; float:left; background-color: rgba(59, 199, 164, 0.295);}
+    div#cont5 {width: 512px;height: 300px; float:right; background-color: rgb(75, 12, 134);}
+</style>
+<body>
+    <div id="wrap">
+        <section id="contents1">
+            <div id="cont1">1행1열</div>
+            <div id="cont2">1행2열</div>
+            <div id="cont3">1행3열</div>
+        </section>
+        <section id="contents2">
+            <div id="cont4">2행1열</div>
+            <div id="cont5">2행2열</div>
+        </section>
+    </div>
+
+</body>
+</html>

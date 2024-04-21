@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클리어픽스 레이아웃1</title>
+</head>
+
+<style>
+    div#wrap {width: 1024px; border: 1px solid rgb(12, 17, 56); margin-left: 100px;}
+        /* 헤더 */
+        header#header {height: 100px;  background-color: antiquewhite;}
+
+        /* 본문 */
+        div#contents {background-color: rgb(209, 123, 9);}
+        div#contents:after {clear:both;  display:block; content:"";} 
+        div#cont1 {width: 200px;height: 500px; float:left; background-color: rgb(106, 226, 50);}
+        div#cont2 {width: 824px;height: 500px; float:right; background-color: rgb(59, 154, 199);}
+
+        /* 푸터 */
+        footer#footer {height: 100px; background-color: rgb(93, 65, 218);}
+        
+
+</style>
+
+<body>
+    <div id="wrap">
+        <!--헤더-->
+        <header id="header">
+            헤더
+        </header>
+        <!--본문-->
+        <div id="contents">
+            <div id="cont1">
+                <section>
+                        1단 영역
+                </section>
+            </div>
+            <div id="cont2">
+                <section>
+                        2단 영역
+                </section>
+            </div>
+        </div>
+        <!--푸터-->
+        <footer id="footer">
+            푸터
+        </footer>
+    </div>
+
+</body>
+</html>

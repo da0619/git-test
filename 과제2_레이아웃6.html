@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제2 레이아웃6</title>
+</head>
+<style>
+    div#wrap {width: 1024px; border: 1px solid rgb(12, 17, 56); margin-left: 100px;}
+    #contents2:after{clear: both; display: block; content: "";}
+    div#cont1 {width: 1024px;height: 300px;background-color: rgb(106, 226, 50);}
+    div#cont2 {width: 341px;height: 300px; float:left; background-color: rgb(59, 154, 199);}
+    div#cont3 {width: 341px;height: 300px; float:right; background-color: rgb(49, 172, 0);}
+    div#cont4 {width: 341px;height: 300px; float:right; background-color: rgba(59, 199, 164, 0.295);}
+</style>
+<body>
+    <div id="wrap">
+        <section id="cotents1">
+            <div id="cont1">1행1열</div>
+        </section>
+        <section id="contents2">
+            <div id="cont2">2행1열</div>
+            <div id="cont3">2행2열</div>
+            <div id="cont4">2행3열</div>
+        </section>
+    </div>
+</body>
+</html>

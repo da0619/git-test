@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 12px;
+        }
+
+        /*여백초기화와 가독성 좋은 12px을 미리 설정해둠*/
+        header {
+            border: 0px solid blue;
+            width: 1024px;
+            height: 100px;
+        }
+
+        h1 {
+            margin-left: 50px;
+            float: left;
+            border: 0px solid red;
+        }
+
+        nav {
+            float: left;
+            margin-left: 100px;
+            margin-top: 20px;
+            border: 0px solid green;
+        }
+
+        nav h2 {
+            display: none;
+        }
+
+        ul#mainmenu>li {
+            list-style: none;
+            position: relative;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        ul#mainmenu>li:hover ul.submenu {
+            /*         height: 60px;*/
+            display: block;
+        }
+
+        ul#mainmenu>li:hover .m {
+            color: black;
+            background-color: rgb(230, 173, 173);
+        }
+
+        ul#mainmenu>li>a {
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            width: 100px;
+            text-align: center;
+            background-color: aqua;
+        }
+
+        ul#mainmenu>li>a:hover {
+            color: white;
+            background-color: red;
+        }
+
+        ul.s1 {
+            height: 60px;
+        }
+
+        ul.s2 {
+            height: 80px;
+        }
+
+        ul.s3 {
+            height: 100px;
+        }
+
+        ul.s4 {
+            height: 60px;
+        }
+
+        ul.submenu {
+            /*position: absolute;*/
+            left: 0;
+            top: 25px;
+            transition: all 1s;
+            /*  overflow: hidden;*/
+            display: none;
+            width: 110px;
+            border: 0 solid black;
+            background-color: rgb(197, 167, 224);
+        }
+
+        ul.submenu li {
+            border: 0px solid red;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.submenu li a {
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        ul.submenu li a:link {
+            color: chartreuse;
+            text-decoration: none;
+        }
+
+        ul.submenu li a:hover {
+            color: brown;
+            background-color: beige;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>로고</h1>
+        <nav>
+            <h2>메인메뉴</h2>
+            <ul id="mainmenu">
+                <li><a href="http://www.daum.net" target="_blank" class="m">메뉴1</a>
+                    <ul class="submenu s1">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://www.naver.com" target="_blank" class="m">메뉴2</a>
+                    <ul class="submenu s2">
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://www.nexon.com" target="_blank" class="m">메뉴3</a>
+                    <ul class="submenu s3">
+                        <li><a href="#">서브메뉴5</a></li>
+                        <li><a href="#">서브메뉴6</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" target="_blank" class="m">메뉴4</a>
+                    <ul class="submenu s4">
+                        <li><a href="#">서브메뉴7</a></li>
+                        <li><a href="#">서브메뉴8</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 레이아웃 </title>
+
+    <style>
+        div#wrapper {
+            width: 1024px;
+            height: 500px;
+            border: 5px solid black
+        }
+
+        div#sidebar {
+            float: left;
+            width: 224px;
+            height: 500px;
+            background-color: antiquewhite;
+        }
+
+        div#main {
+            float: right;
+            width: 800px;
+            height: 500px;
+            background-color: red;
+        }
+
+        div#header {
+            width: 800px;
+            height: 100px;
+            background-color: bisque;
+        }
+
+        div#contents {
+            width: 800px;
+            height: 350px;
+            background-color: goldenrod;
+        }
+
+        div#footer {
+            width: 800px;
+            height: 50px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--wrapper 감싸다-->
+        <div id="sidebar"> sidebar </div>
+        <div id="main">
+            <div id="header"> header </div>
+            <div id="contents"> contents</div>
+            <div id="footer"> footer</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

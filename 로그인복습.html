@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div#loginBox {
+            display: none;      /*로그인 박스 숨김처리함 = 스크립트에서 보이게 변경*/
+            border: 1px solid red;
+            width: 300px;
+            height: 200px;
+            position: relative;
+        }
+
+        div#loginBox button {
+            border: none;
+            color: white;       /*버튼은 기본적으로 입체감있게 표시됨. 없애는게 보기 예쁨*/
+            background-color: cadetblue;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 5px;
+        }
+
+        div#loginBox button:hover {
+            background-color: blue;
+            color: aliceblue;
+        }
+    </style>
+    
+    <script>
+        function show_loginBox() {
+            // alert("ok")
+            document.getElementById("loginBox").style.display = "block"; /*숨겨진 로그인 박스 누르면 보여지게 함.*/
+        }
+        function close_loginBox() {
+            document.getElementById("loginBox").style.display = "none"; /* 보여진 로그인 박스 닫기 누르면  다시 사라지게 함.*/
+        }
+    </script>
+
+</head>
+
+<body>
+    <a href="#" onclick="show_loginBox(); return false">로그인</a>
+
+    <div id="loginBox">
+        회원로그인/비회원로그인
+        <button onclick="close_loginBox()">닫기</button>
+    </div>
+
+</body>
+
+</html>

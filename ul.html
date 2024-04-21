@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 순서가 있는 목록태그 </title>
+</head>
+<style>
+    #title a {
+        font-size: 50px;
+        text-shadow: 4px 2px 6px gray;
+        color: red;
+        display: inline-block;
+        width: 200px;
+    }
+
+    #title {
+        display: inline-block;
+    }
+
+    #title2 {
+        font-family: sans-serif;
+    }
+
+    ul {
+        color: darkgray;
+        list-style: none;
+        display: inline-block;
+    }
+
+    ul li {
+        float: left;
+        margin-right: 25px;
+        margin-left: 35px;
+        font-family: sans-serif;
+        font-weight: bold;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    #title2 a {
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+
+    }
+
+    a:visited {
+        color: black;
+        font-family: sans-serif;
+    }
+
+    .img1 {
+        width: 300px;
+        height: 400px;
+        display: block;
+        padding-bottom: 13px;
+    }
+
+    .img2 {
+        width: 300px;
+        height: 400px;
+        display: block;
+        padding-bottom: 13px;
+    }
+
+    .img3 {
+        width: 300px;
+        height: 400px;
+        display: block;
+        padding-bottom: 13px;
+    }
+
+    .img4 {
+        width: 300px;
+        height: 400px;
+        display: block;
+        padding-bottom: 13px;
+    }
+
+    .img5 {
+        width: 300px;
+        height: 400px;
+        display: block;
+        padding-bottom: 13px;
+    }
+
+    .border-separator {
+        padding-right: 0.5em;
+        border-right: 1px solid gray;
+        margin-right: 0.5em;
+    }
+
+    .jb1 {
+        background-color: whitesmoke;
+    }
+
+    #movieLi {
+        margin-top: 40px;
+    }
+
+    #loginimg {
+        margin-top: 20px;
+        /*    float: right;*/
+        width: 30px;
+        padding: 12px;
+
+
+    }
+
+    #logo {
+        width: 800px;
+    }
+
+    #logo1 {
+        margin-top: 30px;
+        font-size: small;
+
+
+    }
+
+    #logo2 {
+        font-size: small;
+
+    }
+
+    #logo1 a,
+    #logo2 a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <!--순서가 있는 list는 order list로 작성한다. -->
+    <!--Hyper Reference 이동하려는 페이지/경로 사용-->
+    <div id="header">
+        <h1 id="title"><a href="https://www.cgv.co.kr/">CGV</a></h1>
+        <ul id="loginimg">
+            <li>
+                <div id="logo">
+                    <span id="logo1">
+                        <a
+                            href="https://www.cgv.co.kr/user/login/?returnURL=https%3a%2f%2fwww.cgv.co.kr%2fdefault.aspx">
+                            <img id="loginimg" src="자물쇠.jpg" alt="로그인">로그인</a></span>
+                    <span id="logo2">
+                        <a
+                            href="https://www.cgv.co.kr/user/login/?returnURL=https%3a%2f%2fwww.cgv.co.kr%2fdefault.aspx">
+                            <img id="loginimg" src="마이페이지.png" alt="마이페이지">마이페이지</a></span>
+        </ul>
+        </li>
+    </div>
+    </div>
+    <div>
+        <h3 id="title2"><span class="border-separator"><a href="https://www.cgv.co.kr/#none"
+                    target="_blank">무비차트</a></span><span class="border-separator">상영예정작</span></h3>
+
+    </div>
+    <div class="jb1">
+        <ul id="movieLi">
+            <li class="mv1"><a href="http://www.cgv.co.kr/movies/detail-view/still-cut.aspx?midx=86720#menu"
+                    target="_blank">
+                    <img src="%EC%8A%AC%EB%9E%A8%EB%8D%A9%ED%81%AC.jpg" class="img1" alt="퍼스트슬램덩크"> 퍼스트 슬램덩크 </a></li>
+            <li class="mv2"><a href="http://www.cgv.co.kr/movies/detail-view/still-cut.aspx?midx=86909#menu"
+                    targer="b_blank">
+                    <img src="%EC%A1%B4%EC%9C%85.jpg" class="img2" alt="존윅">
+                    존 윅4</a></li>
+            <li class="mv3"><a href="http://www.cgv.co.kr/movies/detail-view/still-cut.aspx?midx=86815#menu"
+                    targer="b_blank"><img src="%EC%8A%A4%EC%A6%88%EB%A9%94%EB%AC%B8%EB%8B%A8%EC%86%8D.jpg" class="img3"
+                        alt="스즈메의문단속">스즈메의 문단속</a></li>
+            <li class="mv4"><a href="http://www.cgv.co.kr/movies/detail-view/still-cut.aspx?midx=86876#menu"
+                    targer="b_blank"><img src="%EB%A6%AC%EB%B0%94%EC%9A%B4%EB%93%9C.jpg" class="img4"
+                        alt="리바운드">리바운드</a></li>
+            <li class="mv5"><a href="http://www.cgv.co.kr/movies/detail-view/still-cut.aspx?midx=86916#menu"
+                    targer="b_blank"><img src="%EC%97%90%EC%96%B4.jpg" class="img5" alt="에어">에어</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

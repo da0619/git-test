@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+</head>
+<style>
+    * { margin: 0; padding: 0;}
+    ul li {list-style: none;}
+    /*링크스타일*/
+    a:link {color:black; text-decoration: none;}
+    a:visited {color: black;text-decoration: none;}
+    a:hover {color: black;text-decoration: underline;}
+    a:active {color: black;text-decoration: none;}
+    a:focus {color: black;text-decoration: none;}
+
+
+    section.notice {position: absolute; width: 300px; border:0px solid rgb(0, 0, 0); padding-bottom: 40px; background-color: rgb(255, 255, 255);}
+    /* 공지사항 탭메뉴 */
+    section.notice h3 {position: absolute; left: 0; top:0; width: 80px; padding: 10px; border: 0px solid black; text-align: center;}
+    section.notice ul {display: none;  position: absolute; left: 0; top:40px; width: 100%;/*블록태그에 포지션 absolute를 사용할 경우 블록특성이 없어진다. 그래서 가로를 지정해줘야함*/ 
+                    padding-left: 20px; border: 0px solid rgb(224, 188, 224); background-color: aqua;}
+    section.notice ul li {position: relative; background-color: yellow; padding: 5px; padding-left: 30px;
+                    background:url("icon.jpg") no-repeat 0 10px; background-size: 15px 15px;}
+    
+    section ul li time {position: absolute; top:10px; right:0px;}
+    section p.more {
+        position: absolute;
+        top: 10px;
+        right: 0; }
+
+    section.news {position: absolute; left: 0; top:0; width: 300px; background-color: aliceblue;}
+    /*뉴스탭메뉴*/
+    section.news h3 {position: absolute; width: 80px; left:110px; top:0; padding: 10px; border: 0px solid black; text-align: center;}
+    section.news ul {position: absolute; left: 0; top:40px; width: 100%;padding-left: 20px; border: 0px solid rgb(235, 210, 235); background-color: rgb(153, 114, 189);}
+    section.news ul li {position: relative; background-color: yellow; padding: 5px; padding-left: 30px;
+                    background:url("icon.jpg") no-repeat 0 10px; background-size: 15px 15px;}
+    
+    section.news ul li time {position: absolute; top:10px; right:0px;}
+    section.news p.more {
+        position: absolute;
+        top: 10px;
+        right: 0; }
+
+</style>
+<body>
+    <section class="notice">
+        <h3>공지사항</h3>
+        <ul>
+            <li><a href="#">공지제목</a> <time>23.04.10</time></li>
+            <li><a href="#">공지제목</a> <time>23.04.04</time></li>
+            <li><a href="#">공지제목</a> <time>23.04.01</time></li>
+            <li><a href="#">공지제목</a> <time>23.03.30</time></li>
+            <li><a href="#">공지제목</a> <time>23.03.30</time></li>
+            <li><a href="#">공지제목</a> <time>23.03.30</time></li>
+            <li><a href="#">공지제목</a> <time>23.03.30</time></li>
+        </ul>
+        <p class="more"><a href="#">더보기</a></p>
+    </section>
+    <section class="news">
+        <h3>뉴스</h3>
+        <ul>
+            <li><a href="#">뉴스제목</a> <time>23.04.10</time></li>
+            <li><a href="#">뉴스제목</a> <time>23.04.04</time></li>
+            <li><a href="#">뉴스제목</a> <time>23.04.01</time></li>
+            <li><a href="#">뉴스제목</a> <time>23.03.30</time></li>
+            <li><a href="#">뉴스제목</a> <time>23.03.30</time></li>
+            <li><a href="#">뉴스제목</a> <time>23.03.30</time></li>
+            <li><a href="#">뉴스제목</a> <time>23.03.30</time></li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
